@@ -1,5 +1,5 @@
 .menu-link {
-  color: #f8f9fa !important;
+  color: #00274f !important;
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 6px;
@@ -8,6 +8,6 @@
 
 /* Hover effect */
 .menu-link:hover {
-  background-color: #ffc107;
-  color: #212529 !important;
+  background-color: #ff0707;
+  color: #ffffff !important;
 }

@@ -1,138 +1,112 @@
-/* Container Styles */
+/* Container */
 .container {
-  max-width: 1000px; /* More width on larger screens like MacBook */
+  max-width: 1000px;
+  padding:1px;
 }
 
-/* Box Shadows and Spacing */
-.shadow-lg {
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #0a0f1e, #0f172a); /* Deep navy gradient */
+  color: #006efd; /* Light gray for readability */
+  font-family: sans-serif;
 }
 
-/* Order Summary */
-.order-summary h2 {
-  color: #333;
-  font-size: 28px;
-  font-weight: bold;
+/* Card Style */
+.order-summary, .payment-methods {
+  background: #1e293b; /* Navy box */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(56, 189, 248, 0.08); /* Cyan glow */
+  color: #0c65d9;
+}
+
+/* Title */
+.order-summary h2, .payment-methods h4 {
+  color: #60a5fa; /* Bright blue highlight */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
+/* Order Items */
 .list-group-item {
-  background-color: #ffffff;
-  font-size: 18px;
+  background: #0f172a; /* Dark navy */
+  border: none;
   padding: 15px 20px;
-  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: #e2e8f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background: #1e293b;
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.3); /* Blue glow */
 }
 
 .list-group-item span {
   font-weight: bold;
+  color: #38bdf8; /* Cyan accent */
 }
 
-.text-success {
-  color: #28a745 !important;
+/* Buttons */
+#pay-now-btn, #paypal-details button {
+  background: linear-gradient(90deg, #1e40af, #312e81); /* Navy gradient */
+  border: none;
+  color: #e2e8f0;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
-/* Payment Method Section */
-.payment-methods h4 {
-  color: #007bff;
-  font-size: 22px;
+#pay-now-btn:hover, #paypal-details button:hover {
+  background: linear-gradient(90deg, #1e3a8a, #1e1b4b); /* Darker navy gradient */
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.4); /* Cyan glow */
 }
 
+/* Payment Details */
 .payment-method-details {
+  margin-top: 20px;
+  padding: 20px;
+  background: #0f172a;
+  border-radius: 15px;
   display: none;
 }
 
 .payment-method-details input,
-.payment-method-details select,
-.payment-method-details button {
+.payment-method-details select {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
   border-radius: 10px;
-}
-
-.payment-method-details .form-group {
-  margin-bottom: 15px;
-}
-
-.payment-method-details input {
   padding: 12px;
   font-size: 16px;
-}
-.order-item {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* Optional: shows pointer on hover */
+  width: 100%;
 }
 
-.order-item:hover {
-  background-color: #f8f9fa; /* light gray background on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.payment-method-details input:focus,
+.payment-method-details select:focus {
+  border-color: #38bdf8; /* Cyan border */
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+  outline: none;
 }
 
-#paypal-details button {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#paypal-details button:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-#pay-now-btn {
-  font-size: 18px;
-  padding: 15px;
-  border-radius: 30px;
-  font-weight: bold;
-  background-color: #28a745;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-#pay-now-btn:hover {
-  background-color: #218838;
-  cursor: pointer;
-}
-
-/* Form Labels */
+/* Labels */
 .form-label {
-  font-weight: bold;
-  font-size: 16px;
+  color: #94a3b8; /* Muted navy-gray */
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
-  }
-
-  #pay-now-btn {
-    width: 100%;
-  }
-
-  .payment-methods h4 {
-    font-size: 20px;
-  }
-
-  .order-summary h2 {
-    font-size: 24px;
-  }
-
-  .order-summary {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .payment-method-details {
-    display: none;
-  }
-  .payment-methods label {
-    font-weight: bold;
-  }
-  .payment-methods select,
-  .payment-methods input {
-    margin-bottom: 15px;
-  }
-  .order-item {
-    padding: 10px 0;
   }
 }
